@@ -1,0 +1,92 @@
+/* RESET PADRÃO SIMPLES DE DOCUMENTO */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* ESTILIZAÇÃo */
+.logo {
+    margin-top: -10px;
+    font-size: 50px;
+}
+
+.nav-text {
+    font-size: 20px;
+}
+
+.line-height {
+    line-height: 30px;
+}
+
+.box {
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.rodape {
+    padding: 30px;
+}
+
+.left {
+    /*Editar botão pra esquerda no media querie*/
+}
+
+.left-img {
+    /*Editar a imagem da parte principal zerando sua margem esquerda no media querie */
+}
+
+.img-animation{
+    transform: rotate(0) scale(1);
+    transition: 1s;
+}
+
+.img-animation:hover{
+    transform: rotate(20deg) scale(1.1, 1.1);
+}
+
+/* Animação */
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+[data-fade]{
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-fade].animate{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+    .main-text {
+        font-size: 30px;
+    }
+
+    .left-img {
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left {
+        margin-left: 0 !important;
+    }
+}
